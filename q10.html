@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Sign-Up Form</title>
+ <style>
+   body{background-color: #f4f4f4;padding: 20px;}
+   .container {background: white;padding: 20px;border-radius: 5px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);}
+   .form-group {margin-bottom: 15px;}
+   input {padding: 10px;border: 1px solid #ccc;border-radius: 5px;transition: border-color 0.3s;}
+   input:focus {border-color: #007bff;}
+   button{background-color: #007bff;color: white;border-radius: 5px;cursor: pointer;transition: background-color 0.3s;}
+   button:hover{background-color: #0056b3;}
+   .error-message{color: red;margin-top: 10px;}
+ </style>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+ <script>
+  $(document).ready(function() {
+  $("#username, #email, #password").mouseenter(function() {
+   $(this).css("background-color", "red");
+  }).mouseleave(function() {
+   $(this).css("background-color", "lightblue"); // Reset background color on mouse leave
+  });
+  $("#button").click(function() {
+  const a = $("#username").val();const b = $("#email").val();const c = $("#password").val();
+  if (a == "" || b == "" || c == "") {
+  alert("The input field is empty!!!");
+  }
+  });
+  });
+ </script>
+</head>
+<body>
+ <div class="container">
+ <h1>Sign Up</h1>
+ <form id="signupForm">
+ <div class="form-group">
+ <p>Name : <input type="text" id="username" name="username"></p>
+ </div>
+ <div class="form-group">
+ <p>Email : <input type="email" id="email" name="email"></p>
+ </div>
+ <div class="form-group">
+ <p>Password : <input type="password" id="password" name="password"></p>
+ </div>
+ <button type="submit">Sign Up</button>
+ <div id="error-message" class="error-message"></div>
+ </form>
+ </div>
+</body>
+</html>

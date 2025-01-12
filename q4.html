@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+ <script
+ src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+ </script>
+ <script>
+ $(document).ready(function() {
+ $("#b1").click(function() {
+ alert("TEXT : "+ $("p").text());
+ });
+ $("#b2").click(function() {
+ alert("HTML : "+ $("div").html());
+ });
+ });
+ </script>
+ <style>
+ 
+ </style>
+</head>
+<body>
+ <p>this is paragraph</p>
+ <div><h1>This is heading inside the div section.</h1><p>this is paragraph inside the div section.</p></div>
+ <button id="b1">fetch text</button>
+ <button id="b2">fetch html</button>
+</body>
+</html>

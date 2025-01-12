@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script
+ src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+ </script>
+ <script>
+ $(document).ready(function() {
+ $("#b1").click(function() {
+ $("ul").append("<li>CSS</li>");
+ });
+ $("#b2").click(function() {
+ $("ul").prepend("<li>Introduction to Full Stack Development</li>");
+ });
+ $("#b3").click(function() {
+ $("ul").after("<p>Topics updated</p>");
+ });
+ $("#b4").click(function() {
+ $("ul").before("<h2>List of Topics Covered</h2>");
+ });
+ });
+ </script>
+</head>
+<body>
+ <ul>
+  <li>Getting Started with Full Stack</li>
+  <li>HTML</li>
+ </ul>
+ <button id="b1">Append</button>
+ <button id="b2">Prepend</button>
+ <button id="b3">After</button>
+ <button id="b4">Before</button>
+</body>
+</html>

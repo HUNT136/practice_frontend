@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+ <style>
+  #xyz{width:400px;height:300px;padding:5px;margin:10px;border:2px solid black;}
+  .highlight{background-color:lightblue;}
+  .dim{opacity:0.6;}
+ </style>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script>
+  $(document).ready(function(){
+  $("#btn1").click(function(){
+  $("#xyz").removeClass("xyz").addClass("highlight");
+  });
+  $("#btn2").click(function(){
+  $("div").removeClass("xyz").addClass("dim");
+  });
+  });
+ </script>
+</head>
+<body>
+ <div id="xyz">Hello!!!</div>
+ <button id="btn1">color</button>
+ <button id="btn2">opacity</button>
+</body>
+</html> 

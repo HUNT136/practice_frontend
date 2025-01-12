@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+ body {font-family: Arial, sans-serif;margin: 20px;}
+ div{margin-bottom: 20px;}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+ $(document).ready(function() {
+ $('#btn').click(function() {
+ var R = $('#elementId').val();
+ $('#' + R).remove();
+ });     
+ });
+</script>
+</head>
+<body>
+ <div id="container">
+ <p id="p1">This is paragraph 1.</p>
+ <p id="p2">This is paragraph 2.</p>
+ <p id="p3">This is paragraph 3.</p>
+ <p id="p4">This is paragraph 4.</p>
+ <p id="p5">This is paragraph 5.</p>
+ </div>
+ <input type="text" id="elementId" placeholder="Enter ID to remove">
+ <button id="btn">Remove Element</button>
+</body>
+</html>

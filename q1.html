@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script
+ src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+ </script>
+ <script>
+ $(document).ready(function() {
+ $("#b1").click(function() {
+ $("body").css("background-color","red");
+ });
+ $("#b2").click(function() {
+ $("body").css("background-color","blue");
+ });
+ $("#b3").click(function() {
+ $("body").css("background-color","green");
+ });
+ $("#b4").click(function() {
+ $("#x").toggle();
+ });
+ });
+ </script>
+ <style>
+  #x{color:yellow;background-color:grey;width:150px;height:100px;}
+ </style>
+</head>
+<body>
+ <div id="x"><h1>heading1</h1><h2>heading2</h2></div>
+ <button id="b1">red</button>
+ <button id="b2">blue</button>
+ <button id="b3">green</button>
+ <button id="b4">toggle_div</button>
+ <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+      <li class="page-item active">
+        <a class="page-link" href="q1(1).html" target="_blank">q1</a>
+      </li>
+    </ul>
+ </nav>
+</body>
+</html>

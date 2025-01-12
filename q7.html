@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Table</title>
+<style>
+ table {width: 100%;border-collapse: collapse;}
+ table, th, td {border: 1px solid black;}
+ th, td {padding: 10px;text-align: left;}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+ $(document).ready(function(){
+ $("#btn1").click(function(){
+ const name = $("#name").val();
+ const age = $("#age").val();
+ const grade = $("#grade").val();
+ $("#studentTable").append("<tr><td>"+name+"</td><td>"+age+"</td><td>"+grade+"</td></tr>");
+ });
+ $("#btn2").click(function(){
+ $("#studentTable").css("background-color","red");
+ }); 
+ });
+</script>
+</head>
+<body>
+ <h1>Student Data</h1>
+ <p>Name : <input type="text" id="name" placeholder="Enter name" style="width:100%;height:2rem;"></p>
+ <p>Age : <input type="number" id="age" placeholder="Enter age" style="width:100%;height:2rem;"></p>
+ <p>Grade : <input type="text" id="grade" placeholder="Enter grade" style="width:100%;height:2rem;"></p>
+ <button id="btn1">Add Row</button>
+ <button id="btn2">Change Color</button><br><br>
+ <table id="studentTable">
+ <thead>
+ <tr><th>Name</th><th>Age</th><th>Grade</th></tr>
+ </thead>
+ <tbody>
+ </tbody>
+</table>
+</body>
+</html>
